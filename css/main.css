@@ -1,0 +1,254 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.hidden { display: none; } */ */
+
+html, body { height: 100% }
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(0, 10, 73);
+  color: white;
+  background-image: url(/images/denim.png);
+  height: 100%;
+
+  
+
+}
+
+header {
+    background-color: rgb(250, 23, 23);
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+#main-logo {
+    width: 300px; padding: 10px 0;
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+#character_nav {
+    text-align: center;
+    /* background-color: rgb(0, 0, 0); */
+
+    background-image: url('../images/DC_banner.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+main {margin-top: -10px;}
+
+.characters {
+    list-style-type: none;
+}
+.characters li {
+    position: relative;
+    display: inline-block;
+    height: 220px;
+    margin: 10px 8px;
+    text-align: left;
+    /* background-color: black; */
+    cursor: pointer;
+}
+
+.characters li h5 {
+    padding: 14px 8px;
+    position: relative;
+  
+    color: rgb(191, 191, 191);
+    z-index: 500;
+    text-align: center;
+
+}
+
+.characters li a {
+    text-decoration: none;
+}
+
+
+
+/* .characters li img {
+    width: 150px;overflow: hidden;
+    cursor: pointer;
+    transform: scale(1,1);transition: all 1s ease-out;
+    
+} */
+.characters li img:hover {
+    transform: scale(1.2,1.2);
+}
+.characters:hover {
+    color: rgb(247, 210, 166);
+    /* background-color: rgb(255, 113, 11); */
+
+}
+
+.red_bumper {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(251, 255, 0);
+
+    transition: height 1s ease;
+    position: absolute;
+}
+
+.characters li:hover .red_bumper {
+    height: 50px;
+}
+
+article {padding: 20px;}
+
+article h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+article p {
+    /* width: 80%; */
+    font-size :18px;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 auto;
+
+}
+
+footer {
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sticky_footer {
+    position: sticky;
+    top: 100%;
+    background-color: rgb(86, 0, 0);
+    height: 80px;
+    
+}
+
+/* lightbox rules here */
+
+.lightbox {
+    
+    width: 100vw; /* vw=viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* background-image: url('/images/Cap_LB_Bg.png'); */
+    background-repeat: no-repeat;
+    background-size: 55vh;  /* 55% of the viewport height */
+    background-position: 40px bottom;
+    display: none;
+   
+}
+
+#batman {
+    background-image: url('/images/badman_transparency.png');
+    background-size: 30%;
+}
+#superman {
+    background-image: url('/images/superman_transparency.png');
+    background-size: 35%;
+
+}
+
+#wonder_woman {
+    background-image: url('/images/wonder_woman_transparent.png');
+    background-size: 35%;
+}
+
+#aquaman {
+    background-image: url('/images/aquaman_transparency.png');
+    background-size: 23%;
+}
+
+#flashman {
+    background-image: url('/images/flashman_transparency.png');
+    background-size: 35%;
+}
+
+#cyborg {
+    background-image: url('/images/cyborg_transparency.png');
+    background-size: 30%;
+}
+
+.lightbox_close {
+    position: relative;
+    top: 10px;
+    left: 95%;
+
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+
+
+.lightbox_close:hover {
+    opacity: 0.5; color: rgb(239, 250, 31);
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    line-height: 1.6 !important;
+    margin-left: 0;
+    padding-top: 2em;
+}
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target {
+    display: block;
+
+}
+/* 根據角色圖片的寬高，就設置多少的寬高，角色頭像才能符合每一個框框裡 */
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url("../images/DC_Sprites2.jpg");
+}
+
+/* 基於角色的寬高，基本是150，依序150往上累積 */
+.sprite:hover {
+    background-position-y: -150px !important;
+}
+
+#carol {
+    background-position: -150px 0;
+}
+
+#clint {
+    background-position: -300px 0;
+}
+
+#hulk {
+    background-position: -450px 0;
+}
+
+#thor {
+    background-position: -600px 0;
+}
+
+#widow {
+    background-position: -750px 0;
+}
